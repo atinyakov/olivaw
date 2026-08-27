@@ -1,0 +1,66 @@
+.robot-row {
+  width: 100%;
+  padding: 13px 15px;
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid #edf0ed;
+  background: white;
+  color: var(--ink);
+}
+
+.robot-row:hover,
+.robot-row.selected {
+  background: #f2f8f4;
+}
+
+.robot-row.selected {
+  box-shadow: inset 3px 0 var(--green);
+}
+
+.robot-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.robot-name,
+.robot-metric {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.robot-name strong,
+.robot-metric strong {
+  font-size: 12px;
+}
+
+.robot-name small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.robot-metric {
+  text-align: right;
+}
+
+.robot-metric small {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  color: var(--muted);
+  text-transform: capitalize;
+  font-size: 9px;
+}

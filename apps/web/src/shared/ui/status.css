@@ -1,0 +1,23 @@
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--slate);
+}
+
+.status-operational {
+  background: var(--green);
+}
+
+.status-warning {
+  background: var(--amber);
+}
+
+.status-stale {
+  background: var(--slate);
+}
+
+.status-offline {
+  background: var(--red);
+}

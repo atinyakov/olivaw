@@ -1,0 +1,147 @@
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #101b1744;
+  backdrop-filter: blur(2px);
+}
+
+.detail-drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: min(430px, 100%);
+  height: 100%;
+  overflow: auto;
+  padding: 24px;
+  background: #fbfcfa;
+  box-shadow: -18px 0 45px #101b1728;
+  animation: slide-in 0.22s ease-out;
+}
+
+.drawer-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.drawer-head h2 {
+  margin: 0 0 4px;
+  font:
+    700 27px Manrope,
+    sans-serif;
+}
+
+.drawer-head span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.icon-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+  font-size: 23px;
+  line-height: 1;
+}
+
+.health-banner {
+  padding: 14px;
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  border-radius: 12px;
+  color: white;
+}
+
+.health-banner > i {
+  margin-top: 5px;
+  border: 2px solid white;
+}
+
+.health-banner div {
+  display: grid;
+  gap: 2px;
+}
+
+.health-banner span {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.detail-grid {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.detail-grid > div,
+.task-card,
+.chart-section {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+
+.detail-grid div,
+.task-card {
+  display: grid;
+  gap: 5px;
+}
+
+.detail-grid span,
+.task-card span,
+.chart-section span {
+  color: var(--muted);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.detail-grid strong {
+  font:
+    700 19px Manrope,
+    sans-serif;
+}
+
+.task-card small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.chart-section {
+  margin-top: 10px;
+}
+
+.chart-section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 700px) {
+  .detail-drawer {
+    top: 8vh;
+    height: 92vh;
+    border-radius: 18px 18px 0 0;
+    animation-name: slide-up;
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+  }
+}

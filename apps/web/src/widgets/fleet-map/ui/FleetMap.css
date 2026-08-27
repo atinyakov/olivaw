@@ -1,0 +1,141 @@
+.map-card {
+  position: relative;
+  padding: 22px;
+  background: #f7f8f5;
+}
+
+.floorplan {
+  display: block;
+  width: 100%;
+  height: 500px;
+}
+
+.floor {
+  fill: #edf0eb;
+  stroke: #cfd6d0;
+  stroke-width: 0.35;
+}
+
+.feature rect {
+  stroke-width: 0.25;
+}
+
+.feature text {
+  font-size: 2px;
+  font-weight: 600;
+  fill: #59635e;
+  pointer-events: none;
+}
+
+.feature-zone rect {
+  fill: #f8faf7;
+  stroke: #dbe0db;
+}
+
+.feature-obstacle rect {
+  fill: #d8ddd8;
+  stroke: #c1c9c2;
+}
+
+.feature-charger rect {
+  fill: #d9f2e6;
+  stroke: #9fd7bd;
+}
+
+.route-line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.robot-marker {
+  cursor: pointer;
+}
+
+.robot-marker circle {
+  fill: var(--green);
+  stroke: white;
+  stroke-width: 0.8;
+  filter: drop-shadow(0 1px 1px #17211d55);
+}
+
+.robot-marker path {
+  fill: white;
+}
+
+.robot-marker text {
+  font-size: 2.1px;
+  font-weight: 700;
+  fill: #34423b;
+  paint-order: stroke;
+  stroke: #f7f8f5;
+  stroke-width: 0.8px;
+}
+
+.marker-warning circle {
+  fill: var(--amber);
+}
+
+.marker-stale circle {
+  fill: var(--slate);
+}
+
+.marker-offline circle {
+  fill: var(--red);
+}
+
+.robot-marker.selected circle {
+  stroke: #153f32;
+  stroke-width: 1.5;
+  r: 4.2px;
+}
+
+.legend {
+  position: absolute;
+  left: 34px;
+  bottom: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #ffffffeb;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media (max-width: 900px) {
+  .floorplan {
+    height: 440px;
+  }
+}
+
+@media (max-width: 700px) {
+  .map-card {
+    min-height: 500px;
+    max-height: 500px;
+  }
+
+  .mobile-list.map-card {
+    display: none;
+  }
+
+  .floorplan {
+    height: 450px;
+  }
+
+  .legend {
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+  }
+}

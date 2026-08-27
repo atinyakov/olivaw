@@ -1,0 +1,25 @@
+.site-picker {
+  min-width: 260px;
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.site-picker select {
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  padding: 0 12px;
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .site-picker {
+    min-width: 0;
+  }
+}

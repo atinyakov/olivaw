@@ -1,0 +1,17 @@
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 11px;
+  background: #bff0d8;
+  color: #123c2f;
+  font:
+    700 20px Manrope,
+    sans-serif;
+}
+
+.brand-mark-large {
+  width: 48px;
+  height: 48px;
+}
