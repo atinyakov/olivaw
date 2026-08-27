@@ -133,5 +133,3 @@ pnpm --filter @olivaw/web exec playwright install chromium
 With more time, I would add authenticated robot identities, operator authentication and authorization, database or time-series persistence, durable event transport, horizontal SSE fan-out, audit records, structured metrics/tracing, versioned real site geometry, and a dedicated indoor-map renderer such as Leaflet with floorplan overlays and marker virtualization for larger fleets. Reconnection and delivery would use durable offsets instead of this process-local replay buffer.
 
 Commands would require an idempotency key, authorization policy, durable command state, robot acknowledgement, timeout handling, and an audit trail. Emergency controls need a separately reviewed safety path rather than being treated as ordinary UI actions.
-
-See [plan.md](./plan.md) for the detailed implementation plan and explicit tradeoffs.
